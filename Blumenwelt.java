@@ -24,6 +24,9 @@ class Blumenwelt
         // Abschnittsende
 
         new Blume(6, 4);
-        
+        new Blume(5, 4);
+        new Blume(4, 4);
+        new Blume(3, 4);
+        new Blume(2, 4);
     }
 }
