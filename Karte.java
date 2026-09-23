@@ -1,33 +1,22 @@
 
 /**
- * Beschreiben Sie hier die Klasse Karte.
+ * Rückseite der Karten (Immer sichtbar)
  * 
- * @author (Ihr Name) 
- * @version (eine Versionsnummer oder ein Datum)
+ * @author Lenny, Victoria
+ * @version 1.0
  */
 public class Karte extends Rechteck
 {
-    // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    private int x;
 
-    /**
-     * Konstruktor für Objekte der Klasse Karte
-     */
-    public Karte()
+    public Karte(int xLinksOben, int yLinksOben)
     {
-        // Instanzvariable initialisieren
-        x = 0;
+        super();
+        this.PositionSetzen(xLinksOben, yLinksOben);
+        this.GrößeSetzen(46, 46);
+        this.FarbeSetzen("grau");
     }
 
-    /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
-     * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
-     */
-    public int beispielMethode(int y)
-    {
-        // tragen Sie hier den Code ein
-        return x + y;
+    public void umdrehen() {
+        this.GanzNachHintenBringen();
     }
 }
