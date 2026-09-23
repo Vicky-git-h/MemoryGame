@@ -5,6 +5,17 @@
  * @author (Ihr Name) 
  * @version (eine Versionsnummer oder ein Datum)
  */
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
+
+
+
+
+
 public class Spieler1 extends Figur
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
@@ -30,4 +41,5 @@ public class Spieler1 extends Figur
         // tragen Sie hier den Code ein
         return x + y;
     }
+    
 }
