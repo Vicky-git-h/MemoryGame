@@ -1,19 +1,19 @@
 
 /**
- * Beschreiben Sie hier die Klasse JAHsklhakjdhakljdh.
+ * Beschreiben Sie hier die Klasse Spieler1.
  * 
  * @author (Ihr Name) 
  * @version (eine Versionsnummer oder ein Datum)
  */
-public class JAHsklhakjdhakljdh
+public class Spieler1 extends Figur
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
     private int x;
 
     /**
-     * Konstruktor für Objekte der Klasse JAHsklhakjdhakljdh
+     * Konstruktor für Objekte der Klasse Spieler1
      */
-    public JAHsklhakjdhakljdh()
+    public Spieler1()
     {
         // Instanzvariable initialisieren
         x = 0;
