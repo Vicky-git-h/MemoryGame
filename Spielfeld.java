@@ -39,7 +39,7 @@ class Spielfeld
             double y = Math.floor(yPos/50);
             
             ausgewählt[zähler] = getKarte((int)x,(int)y);
-            getKarte((int)x,(int)y).FarbeSetzen("blau");
+            getKarte((int)x,(int)y).FarbeSetzen("gold");
             zähler++;
         }
     }
