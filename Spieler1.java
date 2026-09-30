@@ -24,6 +24,17 @@ public class Spieler1 extends Figur
     /**
      * Konstruktor für Objekte der Klasse Spieler1
      */
+    
+    void TasteGedrückt (char taste)
+    {
+    
+    
+    
+    }
+    
+    
+    
+    
     public Spieler1()
     {
         // Instanzvariable initialisieren
@@ -41,5 +52,7 @@ public class Spieler1 extends Figur
         // tragen Sie hier den Code ein
         return x + y;
     }
+ 
+    
     
 }
