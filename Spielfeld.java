@@ -10,8 +10,6 @@ class Spielfeld
 
     public Karte[][] karten = new Karte[10][10];
     public Karte[] ausgewählt = new Karte[2];
-    public Blume[][] blume = new Blume[10][10];
-    public Blume[] Paar = new Blume[2];
 
     Spielfeld()
     {
