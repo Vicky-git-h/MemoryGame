@@ -59,9 +59,7 @@ public class Spieler1 extends Figur
     
     
     public Spieler1()
-    {
-        // Instanzvariable initialisieren
-        x = 0;
+    {    GrößeSetzen(20);
     }
 
     /**
