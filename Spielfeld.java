@@ -10,6 +10,8 @@ class Spielfeld
 
     public Karte[][] karten = new Karte[10][10];
     public Karte[] ausgewählt = new Karte[2];
+    public Blume[][] blume = new Blume[10][10];
+    public Blume[] Paar = new Blume[2];
 
     Spielfeld()
     {
@@ -22,7 +24,6 @@ class Spielfeld
                 karten[kartenNummerX][kartenNummerY] = karte;
             }
         }
-        // Abschnittsende
     }
 
     // Sucht die Karte aus der Liste raus anhand von Koordinaten (x,y)
