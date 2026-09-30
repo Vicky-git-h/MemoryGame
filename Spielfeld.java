@@ -11,7 +11,7 @@ class Spielfeld
     public Karte[][] karten = new Karte[10][10];
     public Karte[] ausgewählt = new Karte[2];
     
-    public Blume[][] blume = new Blume[10][10];
+    public Blume[][] Blume = new Blume[10][10];
     public Blume[] Paar = new Blume[2];
 
     Spielfeld()
@@ -23,6 +23,14 @@ class Spielfeld
             {
                 Karte karte = new Karte(50*kartenNummerX+2, 50*kartenNummerY+2);
                 karten[kartenNummerX][kartenNummerY] = karte;
+            }
+        }
+        for (int blumenNummerX = 0; blumenNummerX < 10; blumenNummerX = blumenNummerX +1)
+        {
+            for (int blumenNummerY = 0; blumenNummerY < 10; blumenNummerY += 1)
+            {
+                Blume blume = new Blume(50*blumenNummerX+2, 50*blumenNummerY+2);
+                Blume[blumenNummerX][blumenNummerY] = blume;
             }
         }
     }

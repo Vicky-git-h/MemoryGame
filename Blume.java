@@ -22,27 +22,23 @@ public class Blume extends Figur
        this.FigurteilFestlegenEllipse(-20, -10, 20, 20, "weiss");
        this.FigurteilFestlegenEllipse(-20, 10, 20, 20, "weiss");
        this.PositionSetzen(225, 125);
-       this.GanzNachVornBringen();
        this.ID = ID;
     }
-    
+
    /**
-   * Der Konstruktor2 erzeugt eine Blume in einem Spielfeld mit 10x10 Zellen.
-   * 
-   * @param xNeu  x-Position der Blume
-   * @param yNeu  y-Position der Blume
+   * ID zuweisung der Farben
    * 
    */
    Blume (int xNeu, int yNeu)
     {
        super();
        this.FigurteilFestlegenEllipse(0, 0, 25, 25, "gelb");
-       this.FigurteilFestlegenEllipse(0, -20, 20, 20, "weiss");
-       this.FigurteilFestlegenEllipse(20, -10, 20, 20, "weiss");
-       this.FigurteilFestlegenEllipse(20, 10, 20, 20, "weiss");
-       this.FigurteilFestlegenEllipse(0, 20, 20, 20, "weiss");
-       this.FigurteilFestlegenEllipse(-20, -10, 20, 20, "weiss");
-       this.FigurteilFestlegenEllipse(-20, 10, 20, 20, "weiss");
+       this.FigurteilFestlegenEllipse(0, -20, 20, 20, "rot");
+       this.FigurteilFestlegenEllipse(20, -10, 20, 20, "rot");
+       this.FigurteilFestlegenEllipse(20, 10, 20, 20, "rot");
+       this.FigurteilFestlegenEllipse(0, 20, 20, 20, "rot");
+       this.FigurteilFestlegenEllipse(-20, -10, 20, 20, "rot");
+       this.FigurteilFestlegenEllipse(-20, 10, 20, 20, "rot");
        this.GanzNachVornBringen();
        
        if(xNeu<10 && xNeu>=0 && yNeu<10 && yNeu>=0)
