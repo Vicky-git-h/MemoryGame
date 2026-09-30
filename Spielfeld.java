@@ -7,9 +7,10 @@
 class Spielfeld
 {
     public int zähler = 0;
-
+    
     public Karte[][] karten = new Karte[10][10];
     public Karte[] ausgewählt = new Karte[2];
+    
     public Blume[][] blume = new Blume[10][10];
     public Blume[] Paar = new Blume[2];
 
@@ -30,15 +31,19 @@ class Spielfeld
     public Karte getKarte(int x, int y) {
         return karten[x][y];
     }
-
+     
     // Karte auswählen
-    public void auswahl(int x, int y) {
+    public void auswahl(int xPos, int yPos) {
         if (zähler < 2) {
-            ausgewählt[zähler] = getKarte(x,y);
+            //ausgewählt[zähler] = getKarte(x,y);
+            double x = Math.floor(xPos/50);
+            double y = Math.floor(yPos/50);
+            
+            ausgewählt[zähler] = getKarte((int)x,(int)y);
             zähler++;
         }
     }
-
+    
     // Ausgewählte Karten umdrehen
     public void karteUmdrehen() {
         ausgewählt[0].SichtbarkeitSetzen(false);
