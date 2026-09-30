@@ -25,12 +25,35 @@ public class Spieler1 extends Figur
      * Konstruktor für Objekte der Klasse Spieler1
      */
     
-    void TasteGedrückt (char taste)
+ void TasteGedrückt(char taste)
+{
+    if (taste == 'w')
     {
-    
-    
-    
+        Drehen(90);
+        Gehen(10);
+        Drehen(-90);
     }
+
+    if (taste == 's')
+    {
+        Drehen(-90);
+        Gehen(10);
+        Drehen(90);
+    }
+
+    if (taste == 'a')
+    {
+        Drehen(180);
+        Gehen(10);
+        Drehen(-180);
+    }
+
+    if (taste == 'd')
+    {
+        Gehen(10);
+    }
+}
+
     
     
     
