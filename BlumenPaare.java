@@ -22,4 +22,13 @@ public class BlumenPaare
             }
         }
     }
+    public void setID (int ID){
+        for (int blumenNummerX = 0; blumenNummerX < 10; blumenNummerX = blumenNummerX +1)
+        {
+            for (int blumenNummerY = 0; blumenNummerY < 10; blumenNummerY += 1)
+            {
+                int ran =(int) (Math.random() * 51);
+            }
+        }
+    }
 }

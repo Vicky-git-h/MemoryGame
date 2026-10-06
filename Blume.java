@@ -22,7 +22,7 @@ public class Blume extends Figur
        this.FigurteilFestlegenEllipse(-20, -10, 20, 20, "weiss");
        this.FigurteilFestlegenEllipse(-20, 10, 20, 20, "weiss");
        this.PositionSetzen( xLinksOben+15, yLinksOben+15);
-       this.ID = ID;
+       //this.ID = ID;
        this.GanzNachVornBringen();
     }
 }
