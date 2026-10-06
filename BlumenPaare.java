@@ -2,8 +2,8 @@
 /**
  * Beschreiben Sie hier die Klasse BlumenPaare.
  * 
- * @author (Ihr Name) 
- * @version (eine Versionsnummer oder ein Datum)
+ * @author Victoria 
+ * @version 1.0
  */
 public class BlumenPaare
 {
