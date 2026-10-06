@@ -28,6 +28,7 @@ public class BlumenPaare
             for (int blumenNummerY = 0; blumenNummerY < 10; blumenNummerY += 1)
             {
                 int ran =(int) (Math.random() * 51);
+                this.setID(ran);
             }
         }
     }
