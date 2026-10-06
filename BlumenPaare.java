@@ -13,10 +13,10 @@ public class BlumenPaare
     //public Blume[] Paar = new Blume[2];
     public void BlumenPaare()
     {
-        for (int i =0;i<101;i++){
-            i=i+1;
+        for (int i =0;i<50;i++){
             zahlenPool [i]=i;
             zahlenPool [i+1]=i;
+            i=i+1;
         }
         for (int blumenNummerX = 0; blumenNummerX < 10; blumenNummerX = blumenNummerX +1)
         {
@@ -26,7 +26,9 @@ public class BlumenPaare
                 blume[blumenNummerX][blumenNummerY] = Blume;
                 if (blume[blumenNummerX][blumenNummerY] != null){
                     for (int n=0;n<101;n++){
-                        blume[blumenNummerX][blumenNummerY].setid(zahlenPool [n]); 
+                        //blume[blumenNummerX][blumenNummerY].setid(zahlenPool [n]);
+                        
+                        blume[blumenNummerX][blumenNummerY].setid((int)(Math.random() *51)); 
                     }
                 }
             }
