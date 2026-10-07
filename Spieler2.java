@@ -12,47 +12,34 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 
-
-
-
-
 public class Spieler2 extends Figur
 {
-    // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    private int x;
+    void SonderTasteGedrückt (int taste)
+    {    
+        if (taste == 37)
+        {
+            Drehen(180);
+            Gehen(10);
+            Drehen(-180);
+        }
 
-    /**
-     * Konstruktor für Objekte der Klasse Spieler2
-     */
-    
-    void TasteGedrückt (char taste)
-    {
-    
-    
-    
-    }
-    
-    
-    
-    
-    public Spieler2()
-    {
-        // Instanzvariable initialisieren
-        x = 0;
-    }
+        if (taste == 38)
+        {
+            Drehen(90);
+            Gehen(10);
+            Drehen(-90);
+        }
 
-    /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
-     * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
-     */
-    public int beispielMethode(int y)
-    {
-        // tragen Sie hier den Code ein
-        return x + y;
+        if (taste == 39)
+        {
+            Gehen(10);
+        }
+
+        if (taste == 40)
+        {
+            Drehen(-90);
+            Gehen(10);
+            Drehen(90);
+        }
     }
- 
-    
-    
 }
