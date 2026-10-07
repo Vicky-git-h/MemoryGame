@@ -5,7 +5,7 @@
  * @author Victoria 
  * @version 1.0
  */
-public class BlumenPaare
+public class BlumenPaare extends Figur
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
     public Blume[][] blume = new Blume[10][10];
@@ -32,8 +32,17 @@ public class BlumenPaare
                     //blume[blumenNummerX][blumenNummerY].setid((int)(Math.random() *51)); 
                 }
                 n++;
+                if (Blume.getid() == 0){
+                    this.FigurteilFestlegenEllipse(0, 0, 25, 25, "gelb");
+                    this.FigurteilFestlegenEllipse(0, -20, 20, 20, "rot");
+                    this.FigurteilFestlegenEllipse(20, -10, 20, 20, "rot");
+                    this.FigurteilFestlegenEllipse(20, 10, 20, 20, "rot");
+                    this.FigurteilFestlegenEllipse(0, 20, 20, 20, "rot");
+                    this.FigurteilFestlegenEllipse(-20, -10, 20, 20, "rot");
+                    this.FigurteilFestlegenEllipse(-20, 10, 20, 20, "rot");
+                }
             }
         }
-
     }
+
 }
