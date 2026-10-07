@@ -37,24 +37,19 @@ class Spielfeld
     // Karte auswählen
     public static void auswahl(int xPos, int yPos) {
         if (zähler < 2) {
+            
+
             double x = Math.floor(xPos/50);
             double y = Math.floor(yPos/50);
-                   
+            if (zähler == 1 && getKarte((int)x,(int)y) == ausgewählt[0]) return;
             ausgewählt[zähler] = getKarte((int)x,(int)y);
             getKarte((int)x,(int)y).FarbeSetzen("gold");
             zähler++;
- 
-        
-        
-        
-        }
-        if (zähler == 1 && karte == ausgewählt[0]) 
-        { return;
-}
-        
-}
 
+        }
+        
     }
+
 
     // Ausgewählte Karten umdrehen
     public static void karteUmdrehen() {
@@ -65,16 +60,10 @@ class Spielfeld
         turn = !turn;
     }
 
-    
-    
     public static boolean getturn() {
         return turn;
 
     
-    
-    
-    
     }
-    
-    
+
 }
