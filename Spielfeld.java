@@ -25,7 +25,7 @@ class Spielfeld
                 karten[kartenNummerX][kartenNummerY] = karte;
             }
         }
-        
+
         new Spieler1();
         new Spieler2();
     }
@@ -67,17 +67,9 @@ class Spielfeld
 
     
     
-    
-    
-    
     public static boolean getturn() {
         return turn;
-        
 
-    
-    
-    
-    
     
     
     
@@ -85,8 +77,4 @@ class Spielfeld
     }
     
     
-    
-    
-    
 }
-
