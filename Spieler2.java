@@ -11,11 +11,24 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-
 public class Spieler2 extends Figur
 {
+    void TasteGedrückt(char taste)
+    {
+        if (Spielfeld.getturn())return;
+        if (taste == 'q')
+        {
+            Spielfeld.auswahl(XPositionGeben(), YPositionGeben());
+        }
+        if (taste == 'u')
+        {
+            Spielfeld.karteUmdrehen();
+        }
+    }
+
     void SonderTasteGedrückt (int taste)
     {    
+        if (Spielfeld.getturn())return;
         if (taste == 37)
         {
             Drehen(180);

@@ -11,9 +11,10 @@ public class Blume extends Figur
     /**
      * Der Konstruktor1 erzeugt eine Blume an der Pixel-Position (225/125). 
      */
-    Blume (int xLinksOben, int yLinksOben)
+    Blume (int xLinksOben, int yLinksOben, int ID)
     {
         super();
+        this.id = ID;
         this.FigurteilFestlegenEllipse(0, 0, 25, 25, "gelb");
         this.FigurteilFestlegenEllipse(0, -20, 20, 20, "weiss");
         this.FigurteilFestlegenEllipse(20, -10, 20, 20, "weiss");
