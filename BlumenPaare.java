@@ -19,19 +19,21 @@ public class BlumenPaare
                 zahlenPool [i]=i;
                 zahlenPool [i+1]=i;
             }
-            for (int blumenNummerX = 0; blumenNummerX < 10; blumenNummerX = blumenNummerX +1)
+        }
+        for (int blumenNummerX = 0; blumenNummerX < 10; blumenNummerX = blumenNummerX +1)
+        {
+            for (int blumenNummerY = 0; blumenNummerY < 10; blumenNummerY += 1)
             {
-                for (int blumenNummerY = 0; blumenNummerY < 10; blumenNummerY += 1)
-                {
-                    Blume Blume = new Blume(50*blumenNummerX+2, 50*blumenNummerY+2);
-                    blume[blumenNummerX][blumenNummerY] = Blume;
-                    if (blume[blumenNummerX][blumenNummerY] != null){
-                        //blume[blumenNummerX][blumenNummerY].setid(zahlenPool [n]);
-                        blume[blumenNummerX][blumenNummerY].setid((int)(Math.random() *51)); 
-                    }
-                    n++;
+                Blume Blume = new Blume(50*blumenNummerX+2, 50*blumenNummerY+2);
+                blume[blumenNummerX][blumenNummerY] = Blume;
+                if (blume[blumenNummerX][blumenNummerY] != null){
+                    blume[blumenNummerX][blumenNummerY].setid(zahlenPool [n]);
+                    System.out.print(zahlenPool[n]);
+                    //blume[blumenNummerX][blumenNummerY].setid((int)(Math.random() *51)); 
                 }
+                n++;
             }
         }
+
     }
 }
