@@ -39,11 +39,21 @@ class Spielfeld
         if (zähler < 2) {
             double x = Math.floor(xPos/50);
             double y = Math.floor(yPos/50);
-
+                   
             ausgewählt[zähler] = getKarte((int)x,(int)y);
             getKarte((int)x,(int)y).FarbeSetzen("gold");
             zähler++;
+ 
+        
+        
+        
         }
+        if (zähler == 1 && karte == ausgewählt[0]) 
+        { return;
+}
+        
+}
+
     }
 
     // Ausgewählte Karten umdrehen

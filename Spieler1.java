@@ -45,17 +45,21 @@ public Spieler1()
  void TasteGedrückt(char taste)
 {
     if (!Spielfeld.getturn())return ;
+    
     if (taste == 'q')
     {
         Spielfeld.auswahl(XPositionGeben(), YPositionGeben());
     }
+    
+    
+    
+    
+    
     if (taste == 'u')
     {
         Spielfeld.karteUmdrehen();
     }
    
- 
-    
     if (taste == 'w')
     {
         Drehen(90);
