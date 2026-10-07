@@ -15,14 +15,20 @@ public class Blume extends Figur
     {
         super();
         this.id = ID;
-        this.FigurteilFestlegenEllipse(0, 0, 25, 25, "gelb");
-        this.FigurteilFestlegenEllipse(0, -20, 20, 20, "weiss");
-        this.FigurteilFestlegenEllipse(20, -10, 20, 20, "weiss");
-        this.FigurteilFestlegenEllipse(20, 10, 20, 20, "weiss");
-        this.FigurteilFestlegenEllipse(0, 20, 20, 20, "weiss");
-        this.FigurteilFestlegenEllipse(-20, -10, 20, 20, "weiss");
-        this.FigurteilFestlegenEllipse(-20, 10, 20, 20, "weiss");
         this.PositionSetzen( xLinksOben+15, yLinksOben+15);
+
+        switch (id) {
+            case 1:
+                this.FigurteilFestlegenEllipse(0, 0, 25, 25, "gelb");
+                this.FigurteilFestlegenEllipse(0, -20, 20, 20, "weiss");
+                this.FigurteilFestlegenEllipse(20, -10, 20, 20, "weiss");
+                this.FigurteilFestlegenEllipse(20, 10, 20, 20, "weiss");
+                this.FigurteilFestlegenEllipse(0, 20, 20, 20, "weiss");
+                this.FigurteilFestlegenEllipse(-20, -10, 20, 20, "weiss");
+                this.FigurteilFestlegenEllipse(-20, 10, 20, 20, "weiss");
+                break;
+            case 2:
+        }
     }
 
     public void setid(int id) {
