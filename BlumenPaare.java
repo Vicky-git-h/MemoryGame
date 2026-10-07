@@ -30,7 +30,6 @@ public class BlumenPaare
                 Blume blume = new Blume(50*blumenNummerX+2, 50*blumenNummerY+2, zahlenPool[n]);
                 blumenFeld[blumenNummerX][blumenNummerY] = blume;
                 n++;
-
             }
         }
     }
