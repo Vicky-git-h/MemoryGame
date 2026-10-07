@@ -25,6 +25,9 @@ class Spielfeld
                 karten[kartenNummerX][kartenNummerY] = karte;
             }
         }
+        
+        new Spieler1();
+        new Spieler2();
     }
 
     // Sucht die Karte aus der Liste raus anhand von Koordinaten (x,y)
