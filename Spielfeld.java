@@ -7,7 +7,7 @@
 class Spielfeld
 {
     private static int zähler = 0;
-
+    private static boolean turn = true; //true spieler 1 und false spieler 2
     private static Karte[][] karten = new Karte[10][10];
     private static Karte[] ausgewählt = new Karte[2];
 
@@ -48,6 +48,31 @@ class Spielfeld
         ausgewählt[0].SichtbarkeitSetzen(false);
         ausgewählt[1].SichtbarkeitSetzen(false);
         zähler = 0;
+        turn = !turn;
+    }
+
+    
+    
+    
+    
+    
+    public static boolean getturn() {
+        return turn;
+        
+
+    
+    
+    
+    
+    
+    
+    
+    
     }
     
+    
+    
+    
+    
 }
+

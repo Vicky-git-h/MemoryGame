@@ -19,7 +19,24 @@ import java.awt.event.KeyListener;
 public class Spieler1 extends Figur
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    private int x;
+    private Kreis kopf;
+    private Rechteck koerper;
+    private Kreis auge1;
+    private Kreis auge2;
+
+
+public Spieler1()
+{
+    kopf = new Kreis();
+    kopf.FarbeSetzen("rot");
+    kopf.RadiusSetzen(20);
+
+    koerper = new Rechteck();
+    koerper.FarbeSetzen("weiss");
+    koerper.GrößeSetzen(12,10);
+
+    }
+
 
     /**
      * Konstruktor für Objekte der Klasse Spieler1
@@ -27,6 +44,15 @@ public class Spieler1 extends Figur
     
  void TasteGedrückt(char taste)
 {
+    if (!Spielfeld.getturn())return ;
+    if (taste == 'q')
+    {
+        Spielfeld.auswahl(XPositionGeben(), YPositionGeben());
+    }
+   
+    
+ 
+    
     if (taste == 'w')
     {
         Drehen(90);
@@ -51,6 +77,7 @@ public class Spieler1 extends Figur
     if (taste == 'd')
     {
         Gehen(10);
+ 
     }
 }
 
@@ -58,9 +85,7 @@ public class Spieler1 extends Figur
     
     
     
-    public Spieler1()
-    {    GrößeSetzen(20);
-    }
+    
 
     /**
      * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
@@ -68,11 +93,11 @@ public class Spieler1 extends Figur
      * @param  y    ein Beispielparameter für eine Methode
      * @return        die Summe aus x und y
      */
-    public int beispielMethode(int y)
-    {
+    
+    
         // tragen Sie hier den Code ein
-        return x + y;
-    }
+      
+    
  
     
     
