@@ -40,6 +40,7 @@ public class BlumenPaare extends Figur
                     this.FigurteilFestlegenEllipse(0, 20, 20, 20, "rot");
                     this.FigurteilFestlegenEllipse(-20, -10, 20, 20, "rot");
                     this.FigurteilFestlegenEllipse(-20, 10, 20, 20, "rot");
+    
                 }
             }
         }
