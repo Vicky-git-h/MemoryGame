@@ -49,8 +49,11 @@ public Spieler1()
     {
         Spielfeld.auswahl(XPositionGeben(), YPositionGeben());
     }
+    if (taste == 'u')
+    {
+        Spielfeld.karteUmdrehen();
+    }
    
-    
  
     
     if (taste == 'w')

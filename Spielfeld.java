@@ -45,6 +45,7 @@ class Spielfeld
 
     // Ausgewählte Karten umdrehen
     public static void karteUmdrehen() {
+        if (zähler != 2) return;
         ausgewählt[0].SichtbarkeitSetzen(false);
         ausgewählt[1].SichtbarkeitSetzen(false);
         zähler = 0;
