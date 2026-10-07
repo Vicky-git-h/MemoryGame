@@ -6,10 +6,10 @@
  */
 class Spielfeld
 {
-    public int zähler = 0;
+    private static int zähler = 0;
 
-    public Karte[][] karten = new Karte[10][10];
-    public Karte[] ausgewählt = new Karte[2];
+    private static Karte[][] karten = new Karte[10][10];
+    private static Karte[] ausgewählt = new Karte[2];
 
     //public Blume[][] blume = new Blume[10][10];
     //public Blume[] Paar = new Blume[2];
@@ -28,11 +28,11 @@ class Spielfeld
     }
 
     // Sucht die Karte aus der Liste raus anhand von Koordinaten (x,y)
-    public Karte getKarte(int x, int y) {
+    public static Karte getKarte(int x, int y) {
         return karten[x][y];
     }
     // Karte auswählen
-    public void auswahl(int xPos, int yPos) {
+    public static void auswahl(int xPos, int yPos) {
         if (zähler < 2) {
             double x = Math.floor(xPos/50);
             double y = Math.floor(yPos/50);
@@ -44,7 +44,7 @@ class Spielfeld
     }
 
     // Ausgewählte Karten umdrehen
-    public void karteUmdrehen() {
+    public static void karteUmdrehen() {
         ausgewählt[0].SichtbarkeitSetzen(false);
         ausgewählt[1].SichtbarkeitSetzen(false);
         zähler = 0;
