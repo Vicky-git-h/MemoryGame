@@ -11,11 +11,19 @@ class Spielfeld
     private static Karte[][] karten = new Karte[10][10];
     private static Karte[] ausgewählt = new Karte[2];
 
-    //public Blume[][] blume = new Blume[10][10];
-    //public Blume[] Paar = new Blume[2];
+    private static Blume[][]blumenFeld = new Blume[10][10];
+    private static Blume[] paar = new Blume[2];
+    // IDs die vergeben werden
+    int zahlenPool[] = new int[100];
+    int n = 0;
 
     Spielfeld()
     {
+        // auffüllen IDs in zahlenPool
+        for (int i = 0; i < 50; i++){
+            zahlenPool [i]=i;
+            zahlenPool [i+50]=i;
+        }
         // Diesen Abschnitt ignorieren, es werden die 10x10 Zellen der Welt erzeugt und positioniert
         for (int kartenNummerX = 0; kartenNummerX < 10; kartenNummerX = kartenNummerX +1)
         {
@@ -23,6 +31,9 @@ class Spielfeld
             {
                 Karte karte = new Karte(50*kartenNummerX+2, 50*kartenNummerY+2);
                 karten[kartenNummerX][kartenNummerY] = karte;
+                Blume blume = new Blume(50*kartenNummerX+2, 50*kartenNummerY+2, zahlenPool[n]);
+                blumenFeld[kartenNummerX][kartenNummerY] = blume;
+                n++;
             }
         }
 
@@ -34,10 +45,10 @@ class Spielfeld
     public static Karte getKarte(int x, int y) {
         return karten[x][y];
     }
+   
     // Karte auswählen
     public static void auswahl(int xPos, int yPos) {
         if (zähler < 2) {
-            
 
             double x = Math.floor(xPos/50);
             double y = Math.floor(yPos/50);
@@ -47,23 +58,21 @@ class Spielfeld
             zähler++;
 
         }
-        
     }
-
-
+   
     // Ausgewählte Karten umdrehen
     public static void karteUmdrehen() {
         if (zähler != 2) return;
         ausgewählt[0].SichtbarkeitSetzen(false);
         ausgewählt[1].SichtbarkeitSetzen(false);
+        
+
         zähler = 0;
         turn = !turn;
     }
 
     public static boolean getturn() {
         return turn;
-
-    
     }
 
 }

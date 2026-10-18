@@ -8,13 +8,13 @@
 public class BlumenPaare
 {
     // Blumenfeld
-    public Blume[][] blumenFeld = new Blume[10][10];
+    private static Blume[][] blumenFeld = new Blume[10][10];
     // IDs die vergeben werden
     int zahlenPool[] = new int[100];
 
     // public Blume[] Paar = new Blume[2];
-    int n = 0;
-    BlumenPaare()
+    int n =0;
+ BlumenPaare()
     {
         // auffüllen IDs in zahlenPool
         for (int i = 0; i < 50; i++){

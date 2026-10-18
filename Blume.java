@@ -15,7 +15,8 @@ public class Blume extends Figur
     {
         super();
         this.id = ID;
-        this.PositionSetzen( xLinksOben+15, yLinksOben+15);
+        this.PositionSetzen( xLinksOben+20, yLinksOben+20);
+        symbol.GanzNachHintenBringen();
 
         switch (id) {
             case 0:
