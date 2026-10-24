@@ -45,7 +45,10 @@ class Spielfeld
     public static Karte getKarte(int x, int y) {
         return karten[x][y];
     }
-   
+    // Sucht die Blume aus der liste
+    public static Blume getBlume(int x, int y) {
+        return blumenFeld[x][y];
+    }
     // Karte auswählen
     public static void auswahl(int xPos, int yPos) {
         if (zähler < 2) {
@@ -59,13 +62,27 @@ class Spielfeld
 
         }
     }
-   
+
+    public static void paar(int xPos, int yPos) {
+        if (zähler < 2) {
+
+            double x = Math.floor(xPos/50);
+            double y = Math.floor(yPos/50);
+            if (zähler == 1 && getKarte((int)x,(int)y) == ausgewählt[0]) return;
+            //paar[zähler] = getBlume((int)x*0,(int)y*0);
+            zähler++;
+
+        }
+    }
     // Ausgewählte Karten umdrehen
     public static void karteUmdrehen() {
         if (zähler != 2) return;
         ausgewählt[0].SichtbarkeitSetzen(false);
         ausgewählt[1].SichtbarkeitSetzen(false);
-        
+        if (paar[0] != paar[1]) {
+            ausgewählt[0].SichtbarkeitSetzen(true);
+            ausgewählt[1].SichtbarkeitSetzen(true);
+        }
 
         zähler = 0;
         turn = !turn;
