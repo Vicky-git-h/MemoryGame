@@ -8,6 +8,8 @@ class Spielfeld extends Ereignisbehandlung
 {
     private static int zähler = 0;
     private static boolean turn = true; //true spieler 1 und false spieler 2
+    private int Score1=0; // Score von Spieler 1
+    private int Score2=0; // Score von Spieler 2
     private static Karte[][] karten = new Karte[10][10]; //erstellen des Spielfelds
     private static Karte[] ausgewählt = new Karte[2]; //merken der Karten
 
@@ -84,10 +86,14 @@ class Spielfeld extends Ereignisbehandlung
             ausgewählt[1].SichtbarkeitSetzen(true);
             ausgewählt[0].FarbeSetzen("grau");
             ausgewählt[1].FarbeSetzen("grau");
-        }
-
+            }else {
+                if (turn) Score1++;
+                else Score2++;
+            }
+        
         zähler = 0;
         turn = !turn;
+        t=0;
         }
     }
 
