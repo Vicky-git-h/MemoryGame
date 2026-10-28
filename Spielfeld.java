@@ -96,6 +96,7 @@ class Spielfeld extends Ereignisbehandlung
             turn = !turn;
             t=0;
         }
+        
     }
 
     public static boolean getturn() {
