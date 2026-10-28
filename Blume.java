@@ -7,7 +7,7 @@
  */
 public class Blume extends Figur
 {
-    private static int id;
+    private int id;
     /**
      * Der Konstruktor1 erzeugt eine Blume an der Pixel-Position (225/125). 
      */
@@ -476,7 +476,7 @@ public class Blume extends Figur
         this.id = id;
     }
 
-    public static int getid() {
+    public int getid() {
         return id;
     }
 }

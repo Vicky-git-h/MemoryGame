@@ -56,20 +56,11 @@ class Spielfeld
             double x = Math.floor(xPos/50);
             double y = Math.floor(yPos/50);
             if (zähler == 1 && getKarte((int)x,(int)y) == ausgewählt[0]) return;
+            if (zähler == 1 && getBlume((int)x,(int)y) == paar[0]) return;
             ausgewählt[zähler] = getKarte((int)x,(int)y);
+            paar[zähler] = getBlume((int)x,(int)y);
             getKarte((int)x,(int)y).FarbeSetzen("gold");
             zähler++;
-
-        }
-    }
-
-    public static void paar(int xPos, int yPos) {
-        if (zähler < 2) {
-
-            double x = Math.floor(xPos/50);
-            double y = Math.floor(yPos/50);
-            if (zähler == 1 && getBlume((int)x,(int)y) == paar[0]) return;
-            //paar[zähler] = getBlume((int)x*0,(int)y*0);
 
         }
     }
@@ -78,7 +69,8 @@ class Spielfeld
         if (zähler != 2) return;
         ausgewählt[0].SichtbarkeitSetzen(false);
         ausgewählt[1].SichtbarkeitSetzen(false);
-        if (paar[0] != paar[1]) {
+        
+        if (paar[0].getid() != paar[1].getid()) {
             ausgewählt[0].SichtbarkeitSetzen(true);
             ausgewählt[1].SichtbarkeitSetzen(true);
         }
