@@ -4,7 +4,7 @@
  * @author Victoria, Lenny
  * @version 1.0
  */
-class Spielfeld
+class Spielfeld extends Ereignisbehandlung
 {
     private static int zähler = 0;
     private static boolean turn = true; //true spieler 1 und false spieler 2
@@ -13,6 +13,8 @@ class Spielfeld
 
     private static Blume[][]blumenFeld = new Blume[10][10];
     private static Blume[] paar = new Blume[2];
+    
+    private static long t = 0; // t = Zeit
     // IDs die vergeben werden
     int zahlenPool[] = new int[100];
     int n = 0;
@@ -69,24 +71,20 @@ class Spielfeld
         if (zähler != 2) return;
         ausgewählt[0].SichtbarkeitSetzen(false);
         ausgewählt[1].SichtbarkeitSetzen(false);
-
-        int i = 3;
-        while (i>0){
-            try {
-                i--;
-                Thread.sleep(1000L);    // 1000L = 1000ms = 1 second
-            }
-            catch (InterruptedException e) {
-                //I don't think you need to do anything for your particular problem
-            }
-        }
-        if (paar[0].getid() != paar[1].getid()) {
+        t= System.currentTimeMillis();
+        
+    }
+    public void TaktImpulsAusführen (){
+        if (t==0) return;
+        if ((System.currentTimeMillis()-t)>=3000){
+            if (paar[0].getid() != paar[1].getid()) {
             ausgewählt[0].SichtbarkeitSetzen(true);
             ausgewählt[1].SichtbarkeitSetzen(true);
         }
 
         zähler = 0;
         turn = !turn;
+        }
     }
 
     public static boolean getturn() {
