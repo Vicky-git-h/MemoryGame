@@ -41,6 +41,8 @@ class Spielfeld extends Ereignisbehandlung
 
         new Spieler1();
         new Spieler2();
+        Starten();
+        TaktdauerSetzen (1000);
     }
 
     // Sucht die Karte aus der Liste raus anhand von Koordinaten (x,y)
@@ -76,10 +78,12 @@ class Spielfeld extends Ereignisbehandlung
     }
     public void TaktImpulsAusführen (){
         if (t==0) return;
-        if ((System.currentTimeMillis()-t)>=3000){
+        if ((System.currentTimeMillis()-t)>=2000){
             if (paar[0].getid() != paar[1].getid()) {
             ausgewählt[0].SichtbarkeitSetzen(true);
             ausgewählt[1].SichtbarkeitSetzen(true);
+            ausgewählt[0].FarbeSetzen("grau");
+            ausgewählt[1].FarbeSetzen("grau");
         }
 
         zähler = 0;
