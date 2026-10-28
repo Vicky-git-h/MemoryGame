@@ -68,9 +68,8 @@ class Spielfeld
 
             double x = Math.floor(xPos/50);
             double y = Math.floor(yPos/50);
-            if (zähler == 1 && getKarte((int)x,(int)y) == ausgewählt[0]) return;
+            if (zähler == 1 && getBlume((int)x,(int)y) == paar[0]) return;
             //paar[zähler] = getBlume((int)x*0,(int)y*0);
-            zähler++;
 
         }
     }
