@@ -69,7 +69,17 @@ class Spielfeld
         if (zähler != 2) return;
         ausgewählt[0].SichtbarkeitSetzen(false);
         ausgewählt[1].SichtbarkeitSetzen(false);
-        
+
+        int i = 3;
+        while (i>0){
+            try {
+                i--;
+                Thread.sleep(1000L);    // 1000L = 1000ms = 1 second
+            }
+            catch (InterruptedException e) {
+                //I don't think you need to do anything for your particular problem
+            }
+        }
         if (paar[0].getid() != paar[1].getid()) {
             ausgewählt[0].SichtbarkeitSetzen(true);
             ausgewählt[1].SichtbarkeitSetzen(true);
