@@ -24,7 +24,7 @@ public class Spieler1 extends Figur
     private Kreis auge1;
     private Kreis auge2;
 
-
+/*
 public Spieler1()
 {
     kopf = new Kreis();
@@ -36,7 +36,7 @@ public Spieler1()
     koerper.GrößeSetzen(12,10);
 
     }
-
+*/
 
     /**
      * Konstruktor für Objekte der Klasse Spieler1
