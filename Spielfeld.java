@@ -1,7 +1,7 @@
 /**
  * Legt das Spielfeld an. 
  * 
- * @author Victoria, Lenny
+ * @author Victoria, Lenny, Miguel, Jonathan
  * @version 1.0
  */
 class Spielfeld extends Ereignisbehandlung
@@ -15,7 +15,7 @@ class Spielfeld extends Ereignisbehandlung
 
     private static Blume[][]blumenFeld = new Blume[10][10];
     private static Blume[] paar = new Blume[2];
-    
+
     private static long t = 0; // t = Zeit
     // IDs die vergeben werden
     int zahlenPool[] = new int[100];
@@ -76,24 +76,25 @@ class Spielfeld extends Ereignisbehandlung
         ausgewählt[0].SichtbarkeitSetzen(false);
         ausgewählt[1].SichtbarkeitSetzen(false);
         t= System.currentTimeMillis();
-        
+
     }
+
     public void TaktImpulsAusführen (){
         if (t==0) return;
         if ((System.currentTimeMillis()-t)>=2000){
             if (paar[0].getid() != paar[1].getid()) {
-            ausgewählt[0].SichtbarkeitSetzen(true);
-            ausgewählt[1].SichtbarkeitSetzen(true);
-            ausgewählt[0].FarbeSetzen("grau");
-            ausgewählt[1].FarbeSetzen("grau");
+                ausgewählt[0].SichtbarkeitSetzen(true);
+                ausgewählt[1].SichtbarkeitSetzen(true);
+                ausgewählt[0].FarbeSetzen("grau");
+                ausgewählt[1].FarbeSetzen("grau");
             }else {
                 if (turn) Score1++;
                 else Score2++;
             }
-        
-        zähler = 0;
-        turn = !turn;
-        t=0;
+
+            zähler = 0;
+            turn = !turn;
+            t=0;
         }
     }
 
