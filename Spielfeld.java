@@ -8,8 +8,8 @@ class Spielfeld
 {
     private static int zähler = 0;
     private static boolean turn = true; //true spieler 1 und false spieler 2
-    private static Karte[][] karten = new Karte[10][10];
-    private static Karte[] ausgewählt = new Karte[2];
+    private static Karte[][] karten = new Karte[10][10]; //erstellen des Spielfelds
+    private static Karte[] ausgewählt = new Karte[2]; //merken der Karten
 
     private static Blume[][]blumenFeld = new Blume[10][10];
     private static Blume[] paar = new Blume[2];
