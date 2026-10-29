@@ -19,6 +19,7 @@ public class Spieler2 extends Figur
         if (taste == 'q')
         {
             Spielfeld.auswahl(XPositionGeben(), YPositionGeben());
+            
         }
         if (taste == 'u')
         {
