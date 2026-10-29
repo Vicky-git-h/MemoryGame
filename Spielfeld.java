@@ -12,7 +12,7 @@ class Spielfeld
     private static Karte[] ausgewählt = new Karte[2];
 
     //public Blume[][] blume = new Blume[10][10];
-    //public Blume[] Paar = new Blume[2];
+    public Blume[] Paar = new Blume[2];
 
     Spielfeld()
     {
