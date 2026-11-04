@@ -19,24 +19,16 @@ import java.awt.event.KeyListener;
 public class Spieler1 extends Figur
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    private Kreis kopf;
-    private Rechteck koerper;
-    private Kreis auge1;
-    private Kreis auge2;
+   
 
-/*
-public Spieler1()
+Spieler1()
 {
-    kopf = new Kreis();
-    kopf.FarbeSetzen("rot");
-    kopf.RadiusSetzen(20);
-
-    koerper = new Rechteck();
-    koerper.FarbeSetzen("weiss");
-    koerper.GrößeSetzen(12,10);
-
+    super();
+    this.FigurteilFestlegenEllipse(-20, -15, 40, 60,"weiss");
+    this.FigurteilFestlegenDreieck(0, 0, 0, 30, 18, 15,"rot");
+   this.PositionSetzen(75, 80);
     }
-*/
+
 
     /**
      * Konstruktor für Objekte der Klasse Spieler1

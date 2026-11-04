@@ -13,6 +13,14 @@ import java.awt.event.KeyListener;
 
 public class Spieler2 extends Figur
 {
+    
+    Spieler2()
+{
+    super();
+    this.FigurteilFestlegenEllipse(-20, -15, 40, 60,"weiss");
+    this.FigurteilFestlegenDreieck(0, 0, 0, 30, 18, 15,"blau");
+    this.PositionSetzen(75, 60);
+    }
     void TasteGedrückt(char taste)
     {
         if (Spielfeld.getturn())return;
