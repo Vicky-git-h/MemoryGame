@@ -20,10 +20,10 @@ class Spielfeld extends Ereignisbehandlung
     private static Blume[] paar = new Blume[2];
 
     private static long t = 0; // t = Zeit
+    private static long s = 0; // start zeit
     // IDs die vergeben werden
     Integer zahlenPool[] = new Integer[100];
     int n = 0;
-
 
     Spielfeld()
     {
@@ -42,14 +42,13 @@ class Spielfeld extends Ereignisbehandlung
             {
                 Karte karte = new Karte(50*kartenNummerX+2, 50*kartenNummerY+2);
                 karten[kartenNummerX][kartenNummerY] = karte;
+                karte.SichtbarkeitSetzen(false);
                 Blume blume = new Blume(50*kartenNummerX+2, 50*kartenNummerY+2, zahlenPool[n]);
                 blumenFeld[kartenNummerX][kartenNummerY] = blume;
                 n++;
             }
         }
-
-        new Spieler1();
-        new Spieler2();
+        s = System.currentTimeMillis();
         Starten();
         TaktdauerSetzen (1000);
     }
@@ -88,6 +87,20 @@ class Spielfeld extends Ereignisbehandlung
     }
 
     public void TaktImpulsAusführen (){
+        if (s!=0) {
+            if ((System.currentTimeMillis()-s)>=3000) {
+                for (int kartenNummerX = 0; kartenNummerX < 10; kartenNummerX = kartenNummerX +1)
+                {
+                    for (int kartenNummerY = 0; kartenNummerY < 10; kartenNummerY += 1)
+                    {
+                        karten[kartenNummerX][kartenNummerY].SichtbarkeitSetzen(true);
+                    }
+                }
+                s=0;
+                new Spieler1();
+                new Spieler2();
+            }
+        }
         if (t==0) return;
         if ((System.currentTimeMillis()-t)>=2000){
             if (paar[0].getid() != paar[1].getid()) {
@@ -107,7 +120,7 @@ class Spielfeld extends Ereignisbehandlung
             zähler = 0;
             t=0;
         }
-        
+
     }
 
     public static boolean getturn() {
