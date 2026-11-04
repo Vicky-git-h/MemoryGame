@@ -99,6 +99,7 @@ class Spielfeld extends Ereignisbehandlung
                 s=0;
                 new Spieler1();
                 new Spieler2();
+                
             }
         }
         if (t==0) return;
