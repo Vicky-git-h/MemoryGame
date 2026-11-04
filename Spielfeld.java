@@ -95,6 +95,7 @@ class Spielfeld extends Ereignisbehandlung
                 ausgewählt[1].SichtbarkeitSetzen(true);
                 ausgewählt[0].FarbeSetzen("grau");
                 ausgewählt[1].FarbeSetzen("grau");
+                turn = !turn;
             }else {
                 if (turn) Score1++;
                 else Score2++;
@@ -104,7 +105,6 @@ class Spielfeld extends Ereignisbehandlung
             }
 
             zähler = 0;
-            turn = !turn;
             t=0;
         }
         
