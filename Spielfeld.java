@@ -13,7 +13,7 @@ class Spielfeld extends Ereignisbehandlung
     private int Score2=0; // Score von Spieler 2
     private static Karte[][] karten = new Karte[10][10]; //erstellen des Spielfelds
     private static Karte[] ausgewählt = new Karte[2]; //merken der Karten
-
+    private static Score1 score = new Score1();
     private static Blume[][]blumenFeld = new Blume[10][10];
     private static Blume[] paar = new Blume[2];
 
@@ -92,6 +92,7 @@ class Spielfeld extends Ereignisbehandlung
             }else {
                 if (turn) Score1++;
                 else Score2++;
+                score.setScore (Score1, Score2);
             }
 
             zähler = 0;

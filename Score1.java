@@ -10,4 +10,9 @@ public class Score1 extends Text
     public void setScore (int Score1, int Score2){
         TextSetzen("Spieler 1: "+ Score1+"        Spieler 2: "+Score2);
     }
+Score1()
+{
+    this.PositionSetzen(500, 20);
+}
+
 }
