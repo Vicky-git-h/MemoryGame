@@ -13,6 +13,7 @@ public class Score1 extends Text
 Score1()
 {
     this.PositionSetzen(500, 20);
+    TextSetzen("Spieler 1: 0        Spieler 2: 0");
 }
 
 }
