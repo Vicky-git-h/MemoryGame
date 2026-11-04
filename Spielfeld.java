@@ -1,4 +1,5 @@
 import java.util.Collections;
+import java.util.*;
 /**
  * Legt das Spielfeld an. 
  * 
@@ -13,6 +14,7 @@ class Spielfeld extends Ereignisbehandlung
     private int Score2=0; // Score von Spieler 2
     private static Karte[][] karten = new Karte[10][10]; //erstellen des Spielfelds
     private static Karte[] ausgewählt = new Karte[2]; //merken der Karten
+    private static List<Karte> umgedrehteKarten = new ArrayList();
     private static Score1 score = new Score1();
     private static Blume[][]blumenFeld = new Blume[10][10];
     private static Blume[] paar = new Blume[2];
@@ -65,6 +67,7 @@ class Spielfeld extends Ereignisbehandlung
             double y = Math.floor(yPos/50);
             if (zähler == 1 && getKarte((int)x,(int)y) == ausgewählt[0]) return;
             if (zähler == 1 && getBlume((int)x,(int)y) == paar[0]) return;
+            if (umgedrehteKarten.contains(getKarte((int)x,(int)y))) return;
             ausgewählt[zähler] = getKarte((int)x,(int)y);
             paar[zähler] = getBlume((int)x,(int)y);
             getKarte((int)x,(int)y).FarbeSetzen("gold");
@@ -93,6 +96,8 @@ class Spielfeld extends Ereignisbehandlung
                 if (turn) Score1++;
                 else Score2++;
                 score.setScore (Score1, Score2);
+                umgedrehteKarten.add(ausgewählt[0]);
+                umgedrehteKarten.add(ausgewählt[1]);
             }
 
             zähler = 0;
