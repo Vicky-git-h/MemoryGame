@@ -21,7 +21,7 @@ class Spielfeld extends Ereignisbehandlung
 
     private static long t = 0; // t = Zeit
     // IDs die vergeben werden
-    int zahlenPool[] = new int[100];
+    Integer zahlenPool[] = new Integer[100];
     int n = 0;
 
 
@@ -32,6 +32,9 @@ class Spielfeld extends Ereignisbehandlung
             zahlenPool [i]=i;
             zahlenPool [i+50]=i;
         }
+        List<Integer> intList = Arrays.asList(zahlenPool);
+        Collections.shuffle(intList);
+        intList.toArray(zahlenPool);
         // Diesen Abschnitt ignorieren, es werden die 10x10 Zellen der Welt erzeugt und positioniert
         for (int kartenNummerX = 0; kartenNummerX < 10; kartenNummerX = kartenNummerX +1)
         {
