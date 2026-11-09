@@ -8,12 +8,13 @@
 public class Score1 extends Text
 {
     public void setScore (int Score1, int Score2){
-        TextSetzen("Spieler 1: "+ Score1+"        Spieler 2: "+Score2);
+        TextSetzen("Spieler Rot: "+ Score1+"        Spieler Blau: "+Score2);
     }
-Score1()
-{
-    this.PositionSetzen(500, 20);
-    TextSetzen("Spieler 1: 0        Spieler 2: 0");
-}
+
+    Score1()
+    {
+        this.PositionSetzen(500, 20);
+        TextSetzen("Spieler Rot: 0        Spieler Blau: 0");
+    }
 
 }
