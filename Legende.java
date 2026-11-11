@@ -8,11 +8,11 @@
 public class Legende extends Text
 {
 
-Legende()
-{
-    this.PositionSetzen(500, 35);
-    this.TextSetzen("Spieler 1 (ROT): W-A-S-D-Tasten        Spieler 2 (BLAU): Pfeiltasten");
-    TextGrößeSetzen (15);
-}
+    Legende()
+    {
+        this.PositionSetzen(500, 50);
+        this.TextSetzen("Spieler 1 (ROT): W-A-S-D-Tasten        Spieler 2 (BLAU): Pfeiltasten \n Auswähln: q \n Umdrehen: u");
+        TextGrößeSetzen (15);
+    }
 
 }
