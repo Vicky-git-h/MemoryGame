@@ -36,9 +36,9 @@ class Spielfeld extends Ereignisbehandlung
             zahlenPool [i+50]=i;
         }
         List<Integer> intList = Arrays.asList(zahlenPool);
-        Collections.shuffle(intList);
+        //Collections.shuffle(intList);
         intList.toArray(zahlenPool);
-        // Diesen Abschnitt ignorieren, es werden die 10x10 Zellen der Welt erzeugt und positioniert
+        // 10x10 Karten und Blumen erzeugt und positioniert
         for (int kartenNummerX = 0; kartenNummerX < 10; kartenNummerX = kartenNummerX +1)
         {
             for (int kartenNummerY = 0; kartenNummerY < 10; kartenNummerY += 1)
@@ -55,6 +55,7 @@ class Spielfeld extends Ereignisbehandlung
         Starten();
         TaktdauerSetzen (1000);
         new Legende();
+        new TurnText();
     }
 
     // Sucht die Karte aus der Liste raus anhand von Koordinaten (x,y)
@@ -93,6 +94,9 @@ class Spielfeld extends Ereignisbehandlung
     }
 
     public void TaktImpulsAusführen (){
+        if (umgedrehteKarten.size() >= 100) {
+        
+        }
         if (s!=0) {
             if ((System.currentTimeMillis()-s)>=5000) {
                 for (int kartenNummerX = 0; kartenNummerX < 10; kartenNummerX = kartenNummerX +1)
