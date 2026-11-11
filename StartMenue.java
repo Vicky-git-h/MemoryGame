@@ -20,4 +20,8 @@ public class StartMenue extends Figur
         start.Entfernen();
         this.Entfernen();
     }
+    
+    public static void main(String[] args) {
+        new StartMenue();
+    }
 }
