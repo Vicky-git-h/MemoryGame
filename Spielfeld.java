@@ -19,6 +19,9 @@ class Spielfeld extends Ereignisbehandlung
     private static Blume[][]blumenFeld = new Blume[10][10];
     private static Blume[] paar = new Blume[2];
 
+    private static Spieler1 spieler1;
+    private static Spieler2 spieler2;
+
     private static long t = 0; // t = Zeit
     private static long s = 0; // start zeit
     // IDs die vergeben werden
@@ -82,6 +85,8 @@ class Spielfeld extends Ereignisbehandlung
         if (zähler != 2) return;
         ausgewählt[0].SichtbarkeitSetzen(false);
         ausgewählt[1].SichtbarkeitSetzen(false);
+        spieler1.SichtbarkeitSetzen(false);
+        spieler2.SichtbarkeitSetzen(false);
         t= System.currentTimeMillis();
 
     }
@@ -97,9 +102,9 @@ class Spielfeld extends Ereignisbehandlung
                     }
                 }
                 s=0;
-                new Spieler1();
-                new Spieler2();
-                
+                spieler1 = new Spieler1();
+                spieler2 = new Spieler2();
+
             }
         }
         if (t==0) return;
@@ -117,7 +122,8 @@ class Spielfeld extends Ereignisbehandlung
                 umgedrehteKarten.add(ausgewählt[0]);
                 umgedrehteKarten.add(ausgewählt[1]);
             }
-
+            spieler1.SichtbarkeitSetzen(true);
+            spieler2.SichtbarkeitSetzen(true);
             zähler = 0;
             t=0;
         }
