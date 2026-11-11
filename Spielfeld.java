@@ -93,7 +93,7 @@ class Spielfeld extends Ereignisbehandlung
 
     public void TaktImpulsAusführen (){
         if (s!=0) {
-            if ((System.currentTimeMillis()-s)>=3000) {
+            if ((System.currentTimeMillis()-s)>=5000) {
                 for (int kartenNummerX = 0; kartenNummerX < 10; kartenNummerX = kartenNummerX +1)
                 {
                     for (int kartenNummerY = 0; kartenNummerY < 10; kartenNummerY += 1)
