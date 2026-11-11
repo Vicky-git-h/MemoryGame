@@ -5,29 +5,19 @@
  * @author (Ihr Name) 
  * @version (eine Versionsnummer oder ein Datum)
  */
-public class StartMenue extends Rechteck
+public class StartMenue extends Figur
 {
-    // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    private int x;
-
-    /**
-     * Konstruktor für Objekte der Klasse StartMenue
-     */
-    public StartMenue()
-    {
-        // Instanzvariable initialisieren
-        x = 0;
+    private static Start start;
+    StartMenue (){
+        super();
+        this.FigurteilFestlegenRechteck(0,0,600, 200,"weiss");
+        this.PositionSetzen(250, 200);
+        start = new Start();
     }
-
-    /**
-     * Ein Beispiel einer Methode - ersetzen Sie diesen Kommentar mit Ihrem eigenen
-     * 
-     * @param  y    ein Beispielparameter für eine Methode
-     * @return        die Summe aus x und y
-     */
-    public int beispielMethode(int y)
+    void MausGeklickt (int x, int y, int anzahl)
     {
-        // tragen Sie hier den Code ein
-        return x + y;
+        new Spielfeld();
+        start.Entfernen();
+        this.Entfernen();
     }
 }
