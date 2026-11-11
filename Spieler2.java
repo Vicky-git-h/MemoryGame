@@ -13,21 +13,22 @@ import java.awt.event.KeyListener;
 
 public class Spieler2 extends Figur
 {
-    
+
     Spieler2()
-{
-    super();
-    this.FigurteilFestlegenEllipse(-20, -15, 40, 60,"weiss");
-    this.FigurteilFestlegenDreieck(0, 0, 0, 30, 18, 15,"blau");
-    this.PositionSetzen(75, 60);
+    {
+        super();
+        this.FigurteilFestlegenEllipse(-20, -15, 40, 60,"weiss");
+        this.FigurteilFestlegenDreieck(0, 0, 0, 30, 18, 15,"blau");
+        this.PositionSetzen(75, 60);
     }
+
     void TasteGedrückt(char taste)
     {
         if (Spielfeld.getturn())return;
         if (taste == 'q')
         {
             Spielfeld.auswahl(XPositionGeben(), YPositionGeben());
-            
+
         }
         if (taste == 'u')
         {
@@ -40,6 +41,7 @@ public class Spieler2 extends Figur
         if (Spielfeld.getturn())return;
         if (taste == 37)
         {
+            if (this.XPositionGeben()+10 < 25) return;
             Drehen(180);
             Gehen(10);
             Drehen(-180);
@@ -47,6 +49,7 @@ public class Spieler2 extends Figur
 
         if (taste == 38)
         {
+            if (this.YPositionGeben()+10 < 25) return;
             Drehen(90);
             Gehen(10);
             Drehen(-90);
@@ -54,11 +57,13 @@ public class Spieler2 extends Figur
 
         if (taste == 39)
         {
+            if (this.XPositionGeben()+10 > 490 ) return;
             Gehen(10);
         }
 
         if (taste == 40)
         {
+            if (this.YPositionGeben() +10  > 480) return;
             Drehen(-90);
             Gehen(10);
             Drehen(90);
