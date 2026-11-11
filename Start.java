@@ -8,7 +8,7 @@
 public class Start extends Text
 {
     // Instanzvariablen - ersetzen Sie das folgende Beispiel mit Ihren Variablen
-    private int x;
+    
 
     /**
      * Konstruktor für Objekte der Klasse Start
@@ -17,7 +17,7 @@ public class Start extends Text
     {
         this.PositionSetzen(350, 250);
         TextSetzen("Start");
-        TextGrößeSetzen (20);
+        TextGrößeSetzen (20); 
     }
 
  
