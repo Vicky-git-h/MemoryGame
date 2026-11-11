@@ -54,7 +54,8 @@ class Spielfeld extends Ereignisbehandlung
         s = System.currentTimeMillis();
         Starten();
         TaktdauerSetzen (1000);
-        
+        new Legende();
+        new TurnText();
     }
 
     // Sucht die Karte aus der Liste raus anhand von Koordinaten (x,y)
