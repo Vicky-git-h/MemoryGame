@@ -45,7 +45,7 @@ public class Spieler1 extends Figur
 
         if (taste == 'w')
         {
-            if (thisYPositionGeben()+10 < 0) return;
+            if (this.YPositionGeben()+10 < 0) return;
             Drehen(90);
             Gehen(10);
             Drehen(-90);
