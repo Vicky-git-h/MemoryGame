@@ -36,7 +36,7 @@ class Spielfeld extends Ereignisbehandlung
             zahlenPool [i+50]=i;
         }
         List<Integer> intList = Arrays.asList(zahlenPool);
-        //Collections.shuffle(intList);
+        Collections.shuffle(intList);
         intList.toArray(zahlenPool);
         // 10x10 Karten und Blumen erzeugt und positioniert
         for (int kartenNummerX = 0; kartenNummerX < 10; kartenNummerX = kartenNummerX +1)
