@@ -10,8 +10,8 @@ class Spielfeld extends Ereignisbehandlung
 {
     private static int zähler = 0;
     private static boolean turn = true; //true spieler 1 und false spieler 2
-    private int Score1=0; // Score von Spieler 1
-    private int Score2=0; // Score von Spieler 2
+    private static int Score1=0; // Score von Spieler 1
+    private static int Score2=0; // Score von Spieler 2
     private static Karte[][] karten = new Karte[10][10]; //erstellen des Spielfelds
     private static Karte[] ausgewählt = new Karte[2]; //merken der Karten
     private static List<Karte> umgedrehteKarten = new ArrayList();
@@ -94,7 +94,7 @@ class Spielfeld extends Ereignisbehandlung
 
     public void TaktImpulsAusführen (){
         if (umgedrehteKarten.size() >= 100) {
-        
+
         }
         if (s!=0) {
             if ((System.currentTimeMillis()-s)>=5000) {
@@ -130,6 +130,9 @@ class Spielfeld extends Ereignisbehandlung
             spieler2.SichtbarkeitSetzen(true);
             zähler = 0;
             t=0;
+            if (umgedrehteKarten.size()== 100) {
+                new Win();
+            }
         }
 
     }
@@ -138,4 +141,10 @@ class Spielfeld extends Ereignisbehandlung
         return turn;
     }
 
+    public static int getScore1() {
+        return Score1;
+    }
+    public static int getScore2() {
+        return Score2;
+    }
 }
