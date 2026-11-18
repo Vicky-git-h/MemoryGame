@@ -2,7 +2,7 @@
 /**
  * Beschreiben Sie hier die Klasse Spieler1.
  * 
- * @author (Ihr Name) 
+ * @author Jonathan
  * @version (eine Versionsnummer oder ein Datum)
  */
 
